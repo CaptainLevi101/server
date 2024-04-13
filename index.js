@@ -47,13 +47,10 @@ app.use((req, res, next) => {
 
 // app.use('/posts', postRoutes);
 // app.use('/user', userRoutes);
-app.use('/api/auth',auth)
-app.use('/api/listing',listing)
-app.use('/api/bookings',bookings);
-app.use('/api/user',user);
-app.get("/",(req,res)=>{
-  res.json("Hello");
-})
+app.use('/auth',auth)
+app.use('/listing',listing)
+app.use('/bookings',bookings);
+app.use('/user',user);
 
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
